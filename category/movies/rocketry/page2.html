@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Count Down Link - Demo</title>
+ 
+  <meta name="viewport" content="width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+document.write('<style type="text/css">#timed{display:none;}<\/style>')
+function delay_link(){
+var d=delay_link, t=document.getElementById('timed');
+if(d.c&&d.c.nodeValue.replace(/[^\d]*/,'')-1>0){
+d.c.nodeValue='\xa0\xa0'+(d.c.nodeValue.replace(/[^\d]*/,'')-1);
+setTimeout('delay_link()', 1000)
+return;
+}
+else if(!d.c){
+d.c=document.createTextNode('5');
+t.parentNode.insertBefore(d.c,t);
+setTimeout('delay_link()', 1000)
+return;
+}
+d.c.nodeValue='';
+t.style.display='inline';
+}
+</script>
+</head>
+<body>
+  <div class="wrapper">
+  <span class="text">
+    &nbsp;&nbsp;BONITOFLIX
+  </span>
+<div class="video">
+    
+   <iframe src="https://www.youtube.com/embed/3pSjdN-PQ3Y?rel=0&fs=0&controls=0&autoplay=1" width="530" height="315" title="BONITOFLIX" frameborder="0"></iframe>
+  </div>
+    <p><a class="boobs" href="#">&nbsp;&nbsp;HOW TO DOWNLOAD?</a></p>
+<button class="button button2"><div class="cent"><a id="timed" style="text-decoration:none" href="https://drive.google.com/file/d/1tn0I8SPa68M-r3KfCL-MLgn8lLOFYk-h/view">Click To Download</a></div></button>
+    
+    </div>
+<script type="text/javascript">delay_link();</script>
+</body>
+  <style>
+    :root {
+	 --textColor1: #008cff;
+	 --textColor2: #fff;
+	 --textColor3: #737594;
+}
+ html, body {
+	 height: 100%;
+}
+ body {
+	 background-color: #0e0e30;
+   min-height: 100vh;
+   display: flex;
+	 align-items: center;
+   justify-content: center;
+}
+ .wrapper {
+	 height: 100%;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+	 padding: 60px;
+}
+ .button {
+   display: flex;
+	 margin: 20px 0;
+   margin-left: 6%;
+	 min-height: 50px;
+	 padding: 13px 24px;
+	 font-family: 'Lucida Grande', 'Helvetica', sans-serif;
+	 font-size: 16px;
+	 line-height: 20px;
+   align-items: center;
+   justify-content: center;
+	 font-weight: bold;
+	 text-transform: uppercase;
+	 text-align: center;
+	 border: none;
+	 border-radius: 4px;
+	 outline: none;
+	 box-shadow: none;
+	 background-color: transparent;
+	 background-position: top center;
+	 cursor: pointer;
+	 transition: 0.3s ease-in-out;
+	 transition-property: background, color;
+}
+ .button1 {
+	 position: relative;
+	 display: block;
+	 color: var(--textColor1);
+	 border-radius: 26px;
+	 box-sizing: border-box;
+	 border: 2px solid transparent;
+	 background-color: #0e0e30;
+	 background-clip: padding-box;
+	 overflow: hidden;
+	 z-index: 1;
+}
+ .button1::before {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 bottom: 0;
+	 right: 0;
+	 border: 2px solid transparent;
+	 background-image: linear-gradient(#0e0e30, #0e0e30), linear-gradient(90deg, #008cff, #6942ef);
+	 background-clip: padding-box, border-box;
+	 background-repeat: repeat-x;
+	 background-size: calc(100% + 2px * 2) calc(100% + 2px * 2);
+	 background-position: center;
+	 border-radius: 26px;
+	 z-index: -1;
+	 transition: border-color 0.2s;
+}
+ .button1::after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 70vmax;
+	 height: 70vmax;
+	 border-radius: 50%;
+	 background-image: linear-gradient(90deg, #008cff, #6942ef);
+	 transform-origin: center;
+	 transform: translate(-50%, -50%) scale(0);
+	 transition: transform 0.4s ease-in-out;
+	 z-index: -1;
+}
+ .button1:hover {
+	 color: var(--textColor2);
+}
+ .button1:hover::after {
+	 transform: translate(-50%, -50%) scale(1);
+}
+ .button1:active {
+	 color: #c3c4d5;
+}
+ .button1:focus {
+	 color: white;
+}
+ .button1:focus::before {
+	 border-color: #00b8d9;
+}
+ .button2 {
+	 position: relative;
+	 color: var(--textColor2);
+	 border-radius: 26px;
+	 background-image: linear-gradient(90deg, #0065ff, #6942ef, #6554c0, #008cff, #0065ff, #6942ef);
+	 background-size: 400%;
+	 background-position: 0% 0%;
+}
+ .button2::before {
+	 content: '';
+	 position: absolute;
+	 left: -2px;
+	 top: -2px;
+	 right: -2px;
+	 bottom: -2px;
+	 border-radius: 26px;
+	 background-image: linear-gradient(90deg, #0065ff, #6942ef, #6554c0, #008cff, #0065ff, #6942ef);
+	 background-size: 500%;
+	 background-position: 0% 0%;
+	 filter: blur(10px);
+	 opacity: 0;
+	 z-index: -1;
+	 transition: opacity 0.2s;
+}
+ .button2:hover {
+	 animation: gradientRotate 2s infinite;
+}
+ .button2:hover::before {
+	 opacity: 1;
+	 animation: gradientRotate 2s infinite;
+}
+ .button2:active {
+	 color: #c3c4d5;
+}
+ .button2:focus::before {
+	 opacity: 1;
+}
+
+ .button4::before {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 bottom: 0;
+	 right: 0;
+	 background-color: #0e0e30;
+	 background-clip: padding-box;
+	 border: 2px solid transparent;
+	 border-radius: 26px;
+	 z-index: -1;
+	 transition: border-color 0.2s;
+}
+ .button4::after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 bottom: 0;
+	 right: 0;
+	 background-color: #737594;
+	 border-radius: 26px;
+	 z-index: -2;
+	 transform: translate(-150%, -150%);
+	 transform-origin: left top;
+	 transition: transform 0.2s;
+}
+ .button4:hover {
+	 color: white;
+}
+ .button4:hover::after {
+	 transform: translate(0, 0);
+}
+ .button4:active {
+	 color: #c3c4d5;
+}
+ .button4:focus {
+	 color: #d8d8e3;
+}
+ @keyframes gradientRotate {
+	 0% {
+		 background-position: 0% 0%;
+	}
+	 100% {
+		 background-position: 100% 100%;
+	}
+}
+
+@keyframes magic {
+	 from {
+		 background-position: 0 0;
+	}
+	 to {
+		 background-position: 100% 100%;
+	}
+}
+ * {
+	 margin: 0;
+	 padding: 0;
+}
+ .wrapper {
+	 width: 100vw;
+	 height: 100vh;
+	 display: flex;
+   padding: 10%;
+	 justify-content: center;
+	 align-items: center;
+	 
+}
+ .text {
+	 font-size: 4em;
+	 font-weight: bold;
+	 font-family: arial;
+	 color: transparent;
+	 background-image: linear-gradient(to right, #0065ff, #6942ef, #6554c0, #008cff, #0065ff, #6942ef);
+	 background-size: 200% 200%;
+	 -webkit-animation: magic 3s infinite linear alternate;
+	 -moz-animation: magic 3s infinite linear alternate;
+	 -ms-animation: magic 3s infinite linear alternate;
+	 -o-animation: magic 3s infinite linear alternate;
+	 animation: magic 3s infinite linear alternate;
+	 -webkit-background-clip: text;
+	 -moz-background-clip: text;
+	 -ms-background-clip: text;
+	 -o-background-clip: text;
+	 background-clip: text;
+}
+
+.boobs{
+  color: white;
+  font-family: arial;
+  
+  text-decoration: none;
+}
+p{
+  margin-top: 2%;
+  margin-bottom: 4%;
+  margin-left: 3%;
+  
+}
+.boobs:hover{
+  background-image: linear-gradient(to right, #0065ff, #6942ef, #6554c0, #008cff, #0065ff, #6942ef);
+  border-radius: 25px;
+}
+
+  </style>
+</html>
